@@ -1,0 +1,43 @@
+.App {
+  box-sizing: border-box;
+  margin-top: 2rem;
+  background-image: linear-gradient(
+  180deg,
+  hsl(240deg 97% 53%) 0%,
+  hsl(220deg 98% 52%) 9%,
+  hsl(201deg 99% 51%) 47%,
+  hsl(181deg 100% 51%) 77%,
+  hsl(171deg 86% 50%) 91%,
+  hsl(171deg 57% 51%) 97%,
+  hsl(171deg 29% 52%) 100%,
+  hsl(0deg 0% 52%) 100%
+);
+  height: calc(100vh - 2rem);
+
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

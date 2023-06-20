@@ -1,0 +1,25 @@
+.Carousel{
+    width: 100vw;
+    height: 42vh;
+    
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.109) ;
+}
+
+
+.Carousel .empty{
+    width: 48%;
+    height: 72%;
+    border-radius: 26px;
+    background-color: beige;
+    margin: auto auto;
+    display: inline-block;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    margin: 0 10px;
+    visibility: hidden;
+    padding:10px;
+}
