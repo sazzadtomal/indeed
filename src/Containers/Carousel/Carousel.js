@@ -1,11 +1,12 @@
 import React,{Component} from "react";
 import classes from "./Carousel.css"
-
+import ScrollContainer from 'react-indiana-drag-scroll'
+import { motion } from "framer-motion";
 
 class Carousel extends Component{
 
-
-
+        
+ 
 
          render(){
 
@@ -16,12 +17,17 @@ class Carousel extends Component{
             style.push(classes.Vertical)
 
           }
-          return (
+          return (<motion.div
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7 }}
+            >
           
-                 <div className={style.join(" ")}>
+             <ScrollContainer hideScrollbars="false" className={style.join(" ")}>
                      {this.props.children}
-                 </div>
-              )
+            </ScrollContainer>
+
+          </motion.div>)
             
          }
 

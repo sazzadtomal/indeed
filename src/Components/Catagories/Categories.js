@@ -1,31 +1,51 @@
-import React from "react";
+import React,{Component} from "react";
 import Carousel from "../../Containers/Carousel/Carousel";
 import CarouselItem from "../../Containers/Carousel/CarouselItem/CarouselItem"
-import music from "../../assets/images/music.jpg"
-import movie from "../../assets/images/movie.jpg"
-import book from "../../assets/images/book.jpg"
+import music from "../../assets/images/cat_music.jpg"
+import movie from "../../assets/images/cat_movies.jpg"
+import book from "../../assets/images/cat_book.jpg"
+import recipe from "../../assets/images/cat_recipe.jpg"
+import hobbies from "../../assets/images/cat_hobbies.jpg"
 
 
 
-const Categories=(props)=>{
 
-    let clickedHandler=(type)=>{
+
+class Categories extends Component{
+
+
+        state={
+                categories:[{src:music,alt:"category-music", name:"Music",des:"Poweful Music to Cheer You up!",path:"/music"},
+                {src:movie,alt:"category-Movie", name:"Movies",des:"Movies that You can enjoy!",path:"/movies"},
+                {src:book,alt:"category-book", name:"Books",des:"A releif from Digitalization!",path:"/books"},
+                {src:recipe,alt:"category-music", name:"Recipes",des:"Mouth watering recipes!",path:"/recipes" },
+                {src:hobbies,alt:"category-hobbies", name:"Hobbies",des:"Hobbies that make you feel at ease",path:"/hobbies"}]
+            }
+
+    
+        clickedHandler=(type)=>{
       
-            props.history.push(type)
-    }
+                this.props.history.push(type)
+        }
+
+        render(){ 
+        
+              const items=this.state.categories.map(cat=>{
+                        return <CarouselItem key={cat.name}  name={cat.name} src={cat.src} alt={cat.alt} des={cat.des} clicked={(event)=>{this.clickedHandler(cat.path)}} />
+                    })
+               
+               
+                
+               return (<Carousel>
+                         {items}
+                      </Carousel>)
+        
+        }
+    
 
 
-
-   return <Carousel>
-            <CarouselItem src={music} alt="category-music" name="Music"   clicked={()=>{clickedHandler("/music")}}/>
-            <CarouselItem src={movie} alt="category-Movie" name="Movies"  clicked={()=>{clickedHandler("/movies")}}/>
-            <CarouselItem src={book} alt="category-book" name="Books"     clicked={()=>{clickedHandler("/books")}}/>
-            <CarouselItem src={music} alt="category-music" name="Recipes" clicked={()=>{clickedHandler("/recipes")}}/>
-            <CarouselItem src={movie} alt="category-Movie" name="Nobles"  clicked={()=>{clickedHandler("/nobles")}}/>
-            <CarouselItem src={book} alt="category-book" name="Hobbies"   clicked={()=>{clickedHandler("/hobbies")}}/>  
-    </Carousel>
+        }
 
 
-}
 
 export default Categories

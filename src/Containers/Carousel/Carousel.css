@@ -2,14 +2,30 @@
 .Carousel{
     width: 100vw;
     position: relative;
-    height: 42vh;
+    height: 45vh;
     overflow-x: scroll;
     display: flex;
     align-items: center;
     /* box-shadow: 0 20px 50px rgba(255, 255, 255, 0.109); */
     padding: 0 10px;
     box-sizing: border-box;
+    scroll-behavior: smooth
 }
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    border-radius: 20px;
+    
+  }
+::-webkit-scrollbar-track {
+    width: 80px;
+}
+
+
+
+
+
 
 .Vertical{
     flex-direction: column;
