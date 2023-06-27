@@ -1,9 +1,7 @@
 {
-  "main.css": "static/css/main.ad7df80f.css",
-  "main.css.map": "static/css/main.ad7df80f.css.map",
-  "main.js": "static/js/main.78b0e05d.js",
-  "main.js.map": "static/js/main.78b0e05d.js.map",
-  "static\\media\\book.jpg": "static/media/book.ff51519b.jpg",
-  "static\\media\\movie.jpg": "static/media/movie.7d39dbdf.jpg",
-  "static\\media\\music.jpg": "static/media/music.284ad7b9.jpg"
+  "main.css": "static/css/main.8f07d725.css",
+  "main.css.map": "static/css/main.8f07d725.css.map",
+  "main.js": "static/js/main.6973eac5.js",
+  "main.js.map": "static/js/main.6973eac5.js.map",
+  "static\\media\\cat_book.jpg": "static/media/cat_book.ff7407cc.jpg"
 }
