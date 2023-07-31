@@ -9,8 +9,8 @@ const navBar=(props)=>{
        
             <nav className={classes.Navbar} >
                 <ul>
-                    <li><a href="/">Suggest</a></li>
-                    <li><a href="/">Consume</a></li>
+                    <li>Suggest</li>
+                    <li>Consume</li>
                 </ul>
             </nav>
     </Aux>
